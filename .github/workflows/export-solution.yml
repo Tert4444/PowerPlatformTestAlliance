@@ -1,3 +1,10 @@
+name: Export Solution to GitHub
+on:
+  workflow_dispatch: # Pozwala uruchomić proces ręcznie przyciskiem
+
+jobs:
+  export-solution:
+    runs-on: windows-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -29,3 +36,4 @@
           git add .
           git commit -m "Automatyczny eksport wersji rozwiązania"
           git push
+
